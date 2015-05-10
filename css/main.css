@@ -1,0 +1,269 @@
+@charset "utf-8";
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+	-moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+	margin: 0;
+	padding-top: 5em;
+}
+
+.container {
+	padding: 2em;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	overflow: hidden;
+}
+
+h1 {
+
+}
+
+.title {
+	text-align: center;
+	font-family: Futura, sans-serif;
+	padding-top: 1em;
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 3em;
+	letter-spacing: -2px;
+	color: #fff;
+	line-height: 1em;
+}
+
+.title-2 {
+	text-align: center;
+	font-family: Times, serif;
+	padding-top: 1em;
+	font-size: 1.5em;
+	letter-spacing: 3px;
+	color: #fff;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+.hook-2 {
+	color: #fff;
+  font-family: Futura, sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 1em;
+  padding-bottom: 0.5em;
+  font-style: oblique;
+}
+
+.hook {
+	color: #fff;
+  font-family: Times, serif;
+  font-size: 1em;
+  letter-spacing: 13px;
+  text-align: center;
+  line-height: 1em;
+  padding-bottom: 1.25em
+}
+
+.inner, .inner-2 {
+	-webkit-transition: all 250ms ease-out;
+	transition: all 500ms ease-out;
+
+	width: calc(100% - 4em);
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-color: #000;
+	border: solid 5px #fff;
+/*	-webkit-animation: reveal 1000ms ease-out forwards;
+	animation: reveal 1000ms ease-out forwards;
+*/}
+
+.inner {
+	opacity: 1;
+	z-index: 10;
+	padding: 2em 0;
+
+}
+
+
+
+
+.tag-1 {
+
+}
+
+.tag-2 {
+
+}
+
+.welcome {
+	top: -1em;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: inline-block;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	font-size: 3vw;
+	background-color: #000;
+	padding: 0 .5em;
+	font-style: italic;
+}
+
+@media only screen and (min-width: 25em) {
+	.title {
+		font-size: 3em;
+		line-height: 0.5em;
+	}
+	.hook {
+		font-size: 2em;
+		letter-spacing: 5px;
+		line-height: 0.5em;
+		padding-bottom: 1em;
+	}
+	.welcome {
+		font-size: 3vw;
+	}
+	.title-2 {
+		font-size: 2em;
+	}
+	.hook-2 {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (min-width: 38em) {
+	.title {
+		font-size: 3em;
+		line-height: 1em;
+
+	}
+	.hook {
+		font-size: 2em;
+		letter-spacing: 5px;
+		line-height: 1em;
+	}
+
+	.welcome {
+		font-size: 4vw;
+	}
+	.title-2 {
+		font-size: 3.5em;
+	}
+	.hook-2 {
+		font-size: 3.5em;
+	}
+}
+
+@media only screen and (min-width: 60em) {
+	.title {
+		font-size: 5.5em
+	}
+	.hook {
+		font-size: 4em;
+		letter-spacing: 10px
+	}
+	.welcome {
+		font-size: 2em;
+	}
+	.title-2 {
+		font-size: 4.5em;
+	}
+	.hook-2 {
+		font-size: 4.5em;
+	}
+}
+
+@media only screen and (min-width: 90em) {
+	.title {
+		font-size: 7em
+	}
+	.hook {
+		font-size: 5em;
+	}
+	.inner, .inner-2 {
+		max-width: 1000px;
+		left: calc(50% - 500px);
+	}
+}
+
+.cover {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: #000;
+	-webkit-animation: reveal 2000ms ease-out forwards;
+	animation: reveal 2000ms ease-out forwards;
+	z-index: 100;
+	box-shadow: 0px 0px 150px rgba(0,0,0,0.75);
+}
+
+@keyframes reveal {
+	0% {
+		height: 100%;
+		opacity: 100%;
+	}
+	100% {
+		height: 0;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes reveal {
+	0% {
+		height: 100%;
+		opacity: 90%;
+	}
+	100% {
+		height: 0;
+		opacity: 90%;
+	}
+}
+
+.comingsoon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+/*	visibility:hidden;*/
+}
+
+.cs {
+	position: absolute;
+	top: calc(50% - 10vw);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	-webkit-transform: translateX(12.5%);
+	transform: translateX(12.5%);
+	color: #fff;
+	font-size: 10vw;
+}
+
+.inner:hover {
+	opacity: 0;
+}
+
