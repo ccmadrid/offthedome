@@ -17,6 +17,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 body{
 	margin: 0;
 	padding-top: 5em;
@@ -84,14 +85,13 @@ h1 {
 .inner, .inner-2 {
 	-webkit-transition: all 250ms ease-out;
 	transition: all 500ms ease-out;
-
-	width: calc(100% - 4em);
 	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
 	background-color: #000;
 	border: solid 5px #fff;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 /*	-webkit-animation: reveal 1000ms ease-out forwards;
 	animation: reveal 1000ms ease-out forwards;
 */}
@@ -100,7 +100,14 @@ h1 {
 	opacity: 1;
 	z-index: 10;
 	padding: 2em 0;
+	width: calc(100% - 4em);
 
+}
+
+.inner-2 {
+	width: calc(100% - 2em);
+	padding: 5em;
+	border: none;
 }
 
 
@@ -267,3 +274,226 @@ h1 {
 	opacity: 0;
 }
 
+.home {
+	padding: 0;
+}
+
+.logo {
+	display: none;
+	margin: 1em;
+	z-index: 10;
+	position: absolute;
+	background-color: #fff;
+	height: 4em;
+	width: 4em;
+}
+
+.navigation {
+	height: 4em;
+	position: relative;
+
+	padding: 1em;
+	background-color: #fff;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px #fff;
+	z-index: 20;
+}
+
+.nav-list {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.nav-list li {
+	display: inline-block;
+	padding: 0.5em;
+}
+
+.nav-list a {
+	padding: 1em;
+	background-color: #fff;
+	text-decoration: none;
+	color: #000;
+	transition: all 200ms ease-out;
+}
+
+.nav-list a:hover {
+	color: #ccc;
+}
+
+.main {
+	background-color: #eee;
+	display: block;
+	position: relative;
+}
+
+.billboard {
+	position: relative;
+}
+
+.billboard img {
+	width: 100%;
+}
+
+
+.stage {
+	background-color: #ccc;
+	width: 100%;
+	overflow: hidden;
+}
+
+.picker {
+	background-color: #eee;
+	overflow: hidden;
+}
+
+.picker-menu{
+	background-color: #eee;
+	position: relative;
+}
+
+.picker-ui {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.picker, .picker-menu {
+	display: block;
+	margin: 0;
+/*	border: solid 2px #ccc;*/
+}
+
+.square {
+	border: solid 2px #000;
+	height: 3em;
+	width: 3em;
+	position: relative;
+}
+
+[hidden] {
+	display: none;
+}
+
+.tabs {
+	list-style: none;
+}
+
+.tabs li {
+	text-align: center;
+	display: inline;
+	padding: 0 auto;
+}
+
+.tabs a {
+	display: block;
+	padding: 1em 0;
+	border: solid 2px #ccc;
+	width: 100%;
+	text-decoration: none;
+	color: #000;
+	border-right-width: 0px;
+}
+
+.tabs:last-child a {
+	border-right-width: 2px;
+}
+
+
+.5panel {
+	height: 100%;
+}
+
+.js-current {
+	border: 0;
+}
+
+.colors {
+	border: solid 2px #ccc;
+	border-top-width: 0;
+}
+
+.solid-1, .solid-2, .solid-3, .solid-4,
+.pattern-1, .pattern-2, .pattern-3,
+.texture-1, .texture-2,
+.stripe-1, .stripe-2, .stripe-3, .stripe-4, .stripe-5, .stripe-6, .stripe-7, .stripe-8, .stripe-9 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+}
+
+.solid-1 {
+	background-color: #f00;
+}
+.solid-2 {
+	background-color: #0f0;
+}
+.solid-3 {
+	background-color: #00f;
+}
+.solid-4 {
+	background-color: #000;
+}
+
+.pattern-1 {
+	background-color: #ff0;
+}
+.pattern-2 {
+	background-color: #0ff;
+}
+.pattern-3 {
+	background-color: #f0f;
+}
+
+.texture-1 {
+	background-color: #eee;
+}
+
+.texture-2 {
+	background-color: #222;
+}
+
+.brim, .front, .sides, .top {
+	cursor: pointer;
+	fill: #fff;
+	stroke: #aaa;
+}
+
+.js-currentPanel {
+	fill: #fff;
+	stroke: #444;
+	stroke-width: 2px;
+
+}
+
+.reset {
+	text-align: center;
+	overflow: hidden;
+	margin: 1em;
+}
+.reset a {
+	text-decoration: none;
+	color: #222;
+	padding: 1em;
+	background-color: #ddd;
+}
+
+.gallery-content {
+	height: 20em;
+	position: relative;
+}
+
+.galleria {
+	height: 20em;
+}
