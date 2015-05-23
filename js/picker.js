@@ -3,8 +3,10 @@ var $5panel = $('.5panel');
 var $panel = 'js-currentPanel';
 var $panelId = 'front';
 var $brim = $('.brim');
-var $top = $('.top');
-var $sides = $('.sides');
+var $topLeft = $('.top-left');
+var $topRight = $('.top-right');
+var $sideLeft = $('.side-left');
+var $sideRight = $('.side-right');
 var $front = $('.front');
 var $reset = $('.reset');
 
@@ -37,7 +39,12 @@ $swatch.on('click', 'a', function (e) {
 	// $5panel.find('.js-currentPanel').css('fill', 'url("' + $swatchId + '")');
 
 	console.log('this is the color of ' + $5panel.find('.js-currentPanel').attr('id') + ': ' + $swatchId);
-	console.log('brim: ' + $brim.css('fill') + ', top: ' + $top.css('fill') + ', sides: ' + $sides.css('fill') + ', front: ' + $front.css('fill'));
+	console.log('brim: ' + $brim.css('fill'));
+	console.log('top-left: ' + $topLeft.css('fill'));
+	console.log('top-right: ' + $topRight.css('fill'));
+	console.log('side-left: ' + $sideLeft.css('fill'));
+	console.log('side-right: ' + $sideRight.css('fill'));
+	console.log('front: ' + $front.css('fill'));
 
 });
 
@@ -45,7 +52,9 @@ $reset.on('click', 'a', function (e) {
 	e.preventDefault();
 
 	$brim.css('fill', '#fff');
-	$top.css('fill', '#fff');
-	$sides.css('fill', '#fff');
+	$topLeft.css('fill', '#fff');
+	$topRight.css('fill', '#fff');
+	$sideLeft.css('fill', '#fff');
+	$sideRight.css('fill', '#fff');
 	$front.css('fill', '#fff')
 });
