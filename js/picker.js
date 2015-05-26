@@ -35,8 +35,9 @@ $swatch.on('click', 'a', function (e) {
 
 	console.log($swatchId);
 
-	$5panel.find('.js-currentPanel').css('fill', $swatchId);
+	// $5panel.find('.js-currentPanel').css('fill', $swatchId);
 	// $5panel.find('.js-currentPanel').css('fill', 'url("' + $swatchId + '")');
+	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')');
 
 	console.log('this is the color of ' + $5panel.find('.js-currentPanel').attr('id') + ': ' + $swatchId);
 	console.log('brim: ' + $brim.css('fill'));
@@ -57,4 +58,6 @@ $reset.on('click', 'a', function (e) {
 	$sideLeft.css('fill', '#fff');
 	$sideRight.css('fill', '#fff');
 	$front.css('fill', '#fff')
+
+	console.log('colours reset to white')
 });

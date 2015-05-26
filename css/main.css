@@ -421,7 +421,7 @@ body{
 	border-top-width: 0;
 }
 
-.solid-1, .solid-2, .solid-3, .solid-4,
+.solid-1, .solid-2, .solid-3, .solid-4, .solid-5, .solid-6, .solid-7, .solid-8, .solid-9, .solid-10,
 .pattern-1, .pattern-2, .pattern-3,
 .texture-1, .texture-2,
 .stripe-1, .stripe-2, .stripe-3, .stripe-4, .stripe-5, .stripe-6, .stripe-7, .stripe-8, .stripe-9 {
@@ -437,16 +437,34 @@ body{
 }
 
 .solid-1 {
-	background-color: #f00;
+	background: url('../img/solid-1.jpg');
 }
 .solid-2 {
-	background-color: #0f0;
+	background: url('../img/solid-2.jpg');
 }
 .solid-3 {
-	background-color: #00f;
+	background: url('../img/solid-3.jpg');
 }
 .solid-4 {
-	background-color: #000;
+	background: url('../img/solid-4.jpg');
+}
+.solid-5 {
+	background: url('../img/solid-5.jpg');
+}
+.solid-6 {
+	background: url('../img/solid-6.jpg');
+}
+.solid-7 {
+	background: url('../img/solid-7.jpg');
+}
+.solid-8 {
+	background: url('../img/solid-8.jpg');
+}
+.solid-9 {
+	background: url('../img/solid-9.jpg');
+}
+.solid-10 {
+	background: url('../img/solid-10.jpg');
 }
 
 .pattern-1 {
@@ -490,16 +508,14 @@ body{
 	padding: 1em;
 	background-color: #ddd;
 }
-
-.galleria {
-	height: 20em;
-}
 /*============================================================================*/
 /*==================================FOOTER====================================*/
 /*============================================================================*/
 
 
-
+/*#brim {
+	fill: url(#img1);
+}*/
 
 
 
