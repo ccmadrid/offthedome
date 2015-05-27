@@ -44,6 +44,7 @@ body{
 	background-color: #eee;
 	display: block;
 	position: relative;
+	overflow: hidden;
 }
 
 /*============================================================================*/
@@ -256,56 +257,7 @@ body{
 	max-width: 1000px;
 }
 
-@media only screen and (min-width: 25em) {
-	.title {
-		font-size: 3em;
-	}
-	.title-2 {
-		font-size: 1.5em;
-	}
-	.hook {
-		font-size: 1em;
-		letter-spacing: 13px;
-	}
-	.hook-2 {
-		font-size: 1.5em;
-	}
-	.inner {
-		padding: 2em 0;
-	}
-	.inner-2 {
-		padding: 5em 0;
-	}
-}
 
-@media only screen and (min-width: 38em) {
-	.title {
-		font-size: 4em;
-	}
-	.title-2 {
-		font-size: 2.5em;
-	}
-	.hook {
-		font-size: 2em;
-		letter-spacing: 13px;
-	}
-	.hook-2 {
-		font-size: 2.5em;
-	}
-}
-
-@media only screen and (min-width: 60em) {
-
-	.welcome {
-		font-size: 1.5vw;
-	}
-}
-
-@media only screen and (min-width: 90em) {
-	.welcome {
-		font-size: 1.5vw;
-	}
-}
 /*============================================================================*/
 /*=================================HAT STAGE==================================*/
 /*============================================================================*/
@@ -319,6 +271,12 @@ body{
 	height: 20em;
 	margin: 2em 0;
 }
+.galleria-thumbnails {
+	margin: 0 auto;
+}
+..galleria-container {
+	background-color: rgba(0,0,0,0);
+}
 /*============================================================================*/
 /*================================PANEL PICKER================================*/
 /*============================================================================*/
@@ -330,12 +288,13 @@ body{
 
 }
 
-.picker-menu{
-
+.picker-menu {
+	overflow: hidden;
+	padding: 1em 0;
 }
 
 .picker-ui {
-	position: absolute;
+	position: relative;
 	width: 100%;
 /*	top: 50%;
 	transform: translateY(-50%);*/
@@ -352,8 +311,8 @@ body{
 .square {
 	margin: 2px;
 	border: solid 0px #000;
-	height: 3em;
-	width: 3em;
+	height: 2.5em;
+	width: 2.5em;
 	position: relative;
 	display: block;;
 	border-radius: 3em;
@@ -442,11 +401,91 @@ body{
 /*==================================FOOTER====================================*/
 /*============================================================================*/
 
+.footer {
+	padding: 1em;
+}
+
+#add-to-cart {
+	visibility: hidden;
+}
+.paypal {
+	padding: 0 3em 3em;
+	position: relative;
+}
+
+.paypal form {
+	text-align: center
+}
 
 
 
 
 
+@media only screen and (min-width: 25em) {
+	.title {
+		font-size: 3em;
+	}
+	.title-2 {
+		font-size: 1.5em;
+	}
+	.hook {
+		font-size: 1em;
+		letter-spacing: 13px;
+	}
+	.hook-2 {
+		font-size: 1.5em;
+	}
+	.inner {
+		padding: 2em 0;
+	}
+	.inner-2 {
+		padding: 5em 0;
+	}
+
+	.square {
+		height: 2.5em;
+		width: 2.5em;
+	}
 
 
 
+}
+
+@media only screen and (min-width: 38em) {
+	.title {
+		font-size: 4em;
+	}
+	.title-2 {
+		font-size: 2.5em;
+	}
+	.hook {
+		font-size: 2em;
+		letter-spacing: 13px;
+	}
+	.hook-2 {
+		font-size: 2.5em;
+	}
+	.square {
+		height: 3em;
+		width: 3em;
+	}
+		.picker-ui {
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+}
+
+@media only screen and (min-width: 60em) {
+
+	.welcome {
+		font-size: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 90em) {
+	.welcome {
+		font-size: 1.5vw;
+	}
+}

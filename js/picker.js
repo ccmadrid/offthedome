@@ -41,6 +41,7 @@ $swatch.on('click', 'a', function (e) {
 		&& $sideLeft.attr('data-colour') != 'none'
 		&& $sideRight.attr('data-colour') != 'none'
 		&& $front.attr('data-colour') != 'none') {
+		document.getElementById('add-to-cart').style.visibility = "visible";
 		console.log('brim: ' + $brim.attr('data-colour'));
 		console.log('top-left: ' + $topLeft.attr('data-colour'));
 		console.log('top-right: ' + $topRight.attr('data-colour'));
@@ -54,6 +55,8 @@ $swatch.on('click', 'a', function (e) {
 			+ ' / side-left: ' + $sideLeft.attr('data-colour')
 			+ ' / side-right: ' + $sideRight.attr('data-colour')
 			+ ' / front: ' + $front.attr('data-colour'));
+
+
 	}
 
 });
@@ -80,4 +83,5 @@ $reset.on('click', 'a', function (e) {
 	console.log('side-left: ' + $sideLeft.attr('data-colour'));
 	console.log('side-right: ' + $sideRight.attr('data-colour'));
 	console.log('front: ' + $front.attr('data-colour'));
+	document.getElementById('add-to-cart').style.visibility = "hidden";
 });
