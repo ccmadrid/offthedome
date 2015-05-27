@@ -165,10 +165,6 @@ body{
 	width: 100%;
 }
 
-.billboard div {
-	max-width: 1000px;
-}
-
 .welcome {
 	top: -1em;
 	position: absolute;
@@ -179,7 +175,7 @@ body{
 	margin: 0 auto;
 	color: #fff;
 	text-align: center;
-	font-size: 3vw;
+	font-size: 1em;
 	background-color: #000;
 	padding: 0 .5em;
 	font-style: italic;
@@ -191,7 +187,7 @@ body{
 	padding-top: 1em;
 	font-style: oblique;
 	font-weight: bold;
-	font-size: 3em;
+	font-size: 2em;
 	letter-spacing: -2px;
 	color: #fff;
 	line-height: 1em;
@@ -211,8 +207,8 @@ body{
 .hook {
 	color: #fff;
   font-family: Times, serif;
-  font-size: 1em;
-  letter-spacing: 13px;
+  font-size: 0.7em;
+  letter-spacing: 10px;
   text-align: center;
   line-height: 1em;
   padding-bottom: 1.25em
@@ -244,8 +240,9 @@ body{
 .inner {
 	opacity: 1;
 	z-index: 10;
-	padding: 2em 0;
+	padding: 0;
 	width: calc(100% - 4em);
+	max-width: calc(1000px - 2em);
 }
 
 .inner:hover {
@@ -254,84 +251,59 @@ body{
 
 .inner-2 {
 	width: calc(100% - 2em);
-	padding: 5em;
+	padding: 2em 0;
 	border: none;
+	max-width: 1000px;
 }
 
 @media only screen and (min-width: 25em) {
 	.title {
 		font-size: 3em;
-		line-height: 0.5em;
-	}
-	.hook {
-		font-size: 2em;
-		letter-spacing: 5px;
-		line-height: 0.5em;
-		padding-bottom: 1em;
-	}
-	.welcome {
-		font-size: 3vw;
 	}
 	.title-2 {
-		font-size: 2em;
+		font-size: 1.5em;
+	}
+	.hook {
+		font-size: 1em;
+		letter-spacing: 13px;
 	}
 	.hook-2 {
-		font-size: 2em;
+		font-size: 1.5em;
+	}
+	.inner {
+		padding: 2em 0;
+	}
+	.inner-2 {
+		padding: 5em 0;
 	}
 }
 
 @media only screen and (min-width: 38em) {
 	.title {
-		font-size: 3em;
-		line-height: 1em;
-
+		font-size: 4em;
+	}
+	.title-2 {
+		font-size: 2.5em;
 	}
 	.hook {
 		font-size: 2em;
-		letter-spacing: 5px;
-		line-height: 1em;
-	}
-
-	.welcome {
-		font-size: 4vw;
-	}
-	.title-2 {
-		font-size: 3.5em;
+		letter-spacing: 13px;
 	}
 	.hook-2 {
-		font-size: 3.5em;
+		font-size: 2.5em;
 	}
 }
 
 @media only screen and (min-width: 60em) {
-	.title {
-		font-size: 5.5em
-	}
-	.hook {
-		font-size: 4em;
-		letter-spacing: 10px
-	}
+
 	.welcome {
-		font-size: 2em;
-	}
-	.title-2 {
-		font-size: 4.5em;
-	}
-	.hook-2 {
-		font-size: 4.5em;
+		font-size: 1.5vw;
 	}
 }
 
 @media only screen and (min-width: 90em) {
-	.title {
-		font-size: 7em
-	}
-	.hook {
-		font-size: 5em;
-	}
-	.inner, .inner-2 {
-		max-width: 1000px;
-		left: calc(50% - 500px);
+	.welcome {
+		font-size: 1.5vw;
 	}
 }
 /*============================================================================*/
