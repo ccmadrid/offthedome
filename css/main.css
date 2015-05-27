@@ -175,6 +175,7 @@ body{
 	display: block;
 	position: absolute;
 	right: 1em;
+	cursor: pointer;
 }
 
 .js-menu-open {
@@ -182,29 +183,20 @@ body{
 }
 @media only screen and (min-width: 38em) {
 	.navigation {
-		display: block;
-		position: relative;
-		height: 4em;
 		padding: 1em;
-		background-color: #fff;
 		overflow: hidden;
-	/*	box-shadow: 0px 5px 5px #fff;*/
-		z-index: 20;
+		box-shadow: 0px 5px 5px #fff;
 	}
 
 	.nav-list {
 		top: 0.75em;
 		position: absolute;
-		margin: 0;
-		padding: 0;
-		list-style: none;
 		left: 5em;
 		transform: none;
 	}
 
 	.nav-list li {
 		display: inline-block;
-		padding: 0.5em;
 		width: auto;
 	}
 
@@ -286,7 +278,6 @@ body{
 	position: absolute;
 	top: 50%;
 	background-color: #000;
-	border: solid 5px #fff;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
@@ -296,8 +287,9 @@ body{
 	opacity: 1;
 	z-index: 10;
 	padding: 0;
-	width: calc(100% - 4em);
+	width: calc(100% - 2em);
 	max-width: calc(1000px - 2em);
+	border: solid 3px #fff;
 }
 
 .inner:hover {
@@ -305,7 +297,7 @@ body{
 }
 
 .inner-2 {
-	width: calc(100% - 2em);
+	width: 100%;
 	padding: 2em 0;
 	border: none;
 	max-width: 1000px;
@@ -495,9 +487,11 @@ body{
 	}
 	.inner {
 		padding: 2em 0;
+		width: calc(100% - 4em);
 	}
 	.inner-2 {
 		padding: 5em 0;
+		width: calc(100% - 2em);
 	}
 
 	.square {
@@ -541,6 +535,9 @@ body{
 	}
 	.nav-list {
 		max-height: 50em;
+	}
+	.inner {
+		border: solid 5px #fff;
 	}
 }
 
