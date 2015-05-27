@@ -35,7 +35,12 @@ $swatch.on('click', 'a', function (e) {
 
 	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
 
-	if ($brim.attr('data-colour') != 'none' && $topLeft.attr('data-colour') != 'none' && $topRight.attr('data-colour') != 'none' && $sideLeft.attr('data-colour') != 'none' && $sideRight.attr('data-colour') != 'none' && $front.attr('data-colour') != 'none') {
+	if ($brim.attr('data-colour') != 'none'
+		&& $topLeft.attr('data-colour') != 'none'
+		&& $topRight.attr('data-colour') != 'none'
+		&& $sideLeft.attr('data-colour') != 'none'
+		&& $sideRight.attr('data-colour') != 'none'
+		&& $front.attr('data-colour') != 'none') {
 		console.log('brim: ' + $brim.attr('data-colour'));
 		console.log('top-left: ' + $topLeft.attr('data-colour'));
 		console.log('top-right: ' + $topRight.attr('data-colour'));
