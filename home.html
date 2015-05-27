@@ -7,6 +7,7 @@
   <link href="css/grid.css" rel="stylesheet">
   <link href="css/typography.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/swatches.css" rel="stylesheet">
 </head>
 <body class="home">
 
@@ -22,6 +23,7 @@
 			<li class="unit"><a href="">Item 4</a></li>
 		</ul>
 	</div>
+
 </header>
 
 <main class="main">
@@ -47,114 +49,144 @@
 		<div class="panel-picker unit unit-xs-1 unit-s-1-2">
 
 			<svg class="5panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 350">
-			  <style>
-			    .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;} .st1{opacity:0.42;}
-			  </style>
-
-			  <defs>
-			    <pattern id="solid-1" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-1.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-2" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-2.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-3" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-3.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-4" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-4.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-5" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-5.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-6" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-6.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-7" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-7.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-8" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-8.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-9" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-9.jpg" width="125" height="125" />
-			    </pattern>
-			    <pattern id="solid-10" patternUnits="userSpaceOnUse" width="125" height="125">
-			        <image xlink:href="img/solid-10.jpg" width="125" height="125" />
-			    </pattern>
+				<defs>
+				<filter id="dropshadow" height="130%">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+					<feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+					<feMerge>
+						<feMergeNode/> <!-- this contains the offset blurred image -->
+						<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+					</feMerge>
+				</filter>
 				</defs>
+				<defs class="solid-fills">
+				</defs>
+				<script id="solid-fill-template" type="x-tmpl-mustache">
+					{{#solids}}
+					<pattern id="{{swatchId}}" patternUnits="userSpaceOnUse" width="125" height="125">
+						<image xlink:href="img/{{swatchId}}.jpg" width="125" height="125" />
+					</pattern>
+					{{/solids}}
+				</script>
+				<defs class="pattern-fills">
+				</defs>
+				<script id="pattern-fill-template" type="x-tmpl-mustache">
+					{{#patterns}}
+					<pattern id="{{swatchId}}" patternUnits="userSpaceOnUse" width="125" height="125">
+						<image xlink:href="img/{{swatchId}}.jpg" width="125" height="125" />
+					</pattern>
+					{{/patterns}}
+				</script>
+				<defs class="texture-fills">
+				</defs>
+				<script id="texture-fill-template" type="x-tmpl-mustache">
+					{{#textures}}
+					<pattern id="{{swatchId}}" patternUnits="userSpaceOnUse" width="125" height="125">
+						<image xlink:href="img/{{swatchId}}.jpg" width="125" height="125" />
+					</pattern>
+					{{/textures}}
+				</script>
+				<defs class="stripe-fills">
+				</defs>
+				<script id="stripe-fill-template" type="x-tmpl-mustache">
+					{{#stripes}}
+					<pattern id="{{swatchId}}" patternUnits="userSpaceOnUse" width="125" height="125">
+						<image xlink:href="img/{{swatchId}}.jpg" width="125" height="125" />
+					</pattern>
+					{{/stripes}}
+				</script>
 
-			  <path id="brim" d="M178 233l-13.2 4c-25.3 7.2-52 7.2-77.4 0l-13-4-.2 4c-.3 14.2 2.6 39.7 13.3 49 19.7 17.5 55.4 17.5 75 0 11.7-10.3 15.4-37.2 15.4-53z" class="brim" />
-			  <path id="side-right" d="M229.5 118s3.5 43.4-1.7 87.4c0 0-22.5-1.4-26.3-2.6-4.5-1.5-15.3-5.5-21-18.4 0 0-3.4-7.3-4-19.4-.6-12.2 2.6-22.8 9-32.3s20-13.4 24-14c4-.8 7.7-2 20-.8z" class="side-right"/>
-			  <path id="side-left" d="M22.7 118s-3.5 43.4 1.7 87.4c0 0 22.5-1.4 26.3-2.6 4.5-1.5 15.3-5.5 21-18.4 0 0 3.4-7.3 4-19.4.6-12.2-2.6-22.8-9-32.3s-20-13.4-24-14c-4-.8-7.7-2-20-.8z" class="side-left"/>
-			  <path id="top-right" d="M214.5 47.7s-4.6-7.4-13-14.6c0 0-9.3 10.6-18 16-8.6 5.3-18 1.5-29.2-2 0 0-27.4 41-25.7 109.6l40 .5c0-.2-9.6-70 46-109.2z" class="top-right"/>
-			  <path id="top-left" d="M68.3 48.7c-8.6-5.3-18-15.7-18-15.7-8.3 7.3-13 14.6-13 14.6 55.5 39.4 46 109 46 109l40-.4c1.5-68.6-25.8-109.5-25.8-109.5-11.2 3.5-20.6 7.3-29.2 2z" class="top-left"/>
-			  <path id="front" d="M126.2 228c-14.5.5-30-1.7-44-4.6l1.2-43.7c24.7-10.2 61-9.8 85.6 0l1.2 43.7c-.2 0-7.6 4.4-44 4.5z" class="front js-currentPanel"/>
+				<path id="brim" d="M178 233l-13.2 4c-25.3 7.2-52 7.2-77.4 0l-13-4-.2 4c-.3 14.2 2.6 39.7 13.3 49 19.7 17.5 55.4 17.5 75 0 11.7-10.3 15.4-37.2 15.4-53z" class="brim" data-colour="none"/>
+				<path id="side-right" d="M229.5 118s3.5 43.4-1.7 87.4c0 0-22.5-1.4-26.3-2.6-4.5-1.5-15.3-5.5-21-18.4 0 0-3.4-7.3-4-19.4-.6-12.2 2.6-22.8 9-32.3s20-13.4 24-14c4-.8 7.7-2 20-.8z" class="side-right" data-colour="none"/>
+				<path id="side-left" d="M22.7 118s-3.5 43.4 1.7 87.4c0 0 22.5-1.4 26.3-2.6 4.5-1.5 15.3-5.5 21-18.4 0 0 3.4-7.3 4-19.4.6-12.2-2.6-22.8-9-32.3s-20-13.4-24-14c-4-.8-7.7-2-20-.8z" class="side-left" data-colour="none"/>
+				<path id="top-right" d="M214.5 47.7s-4.6-7.4-13-14.6c0 0-9.3 10.6-18 16-8.6 5.3-18 1.5-29.2-2 0 0-27.4 41-25.7 109.6l40 .5c0-.2-9.6-70 46-109.2z" class="top-right" data-colour="none"/>
+				<path id="top-left" d="M68.3 48.7c-8.6-5.3-18-15.7-18-15.7-8.3 7.3-13 14.6-13 14.6 55.5 39.4 46 109 46 109l40-.4c1.5-68.6-25.8-109.5-25.8-109.5-11.2 3.5-20.6 7.3-29.2 2z" class="top-left" data-colour="none"/>
+				<path id="front" d="M126.2 228c-14.5.5-30-1.7-44-4.6l1.2-43.7c24.7-10.2 61-9.8 85.6 0l1.2 43.7c-.2 0-7.6 4.4-44 4.5z" class="front js-currentPanel" data-colour="none"/>
 			</svg>
 
 		</div><!--panel picker end-->
 
 		<div class="picker-menu unit unit-xs-1 unit-s-1-2">
+
 			<div class="picker-ui">
 
 				<ul class="tabs grid">
-					<li class="unit unit-s-1-4"><a class="js-current" href="#tab-1">Solids</a></li>
-					<li class="unit unit-s-1-4"><a href="#tab-2">Patterns</a></li>
-					<li class="unit unit-s-1-4"><a href="#tab-3">Textures</a></li>
-					<li class="unit unit-s-1-4"><a href="#tab-4">Stripes</a></li>
+					<li class="unit unit-xs-1-4"><a class="js-current" href="#tab-1">Solids</a></li>
+					<li class="unit unit-xs-1-4"><a href="#tab-2">Patterns</a></li>
+					<li class="unit unit-xs-1-4"><a href="#tab-3">Textures</a></li>
+					<li class="unit unit-xs-1-4"><a href="#tab-4">Stripes</a></li>
 				</ul><!--swatch tabs end-->
 
 				<div class="tab-swatches">
 
 					<div class="swatch" id="tab-1">
-						<div class="grid island-1-2 colors">
-							<div class="square unit unit-s-1-4"><a class="solid-1" href="#solid-1"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-2" href="#solid-2"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-3" href="#solid-3"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-4" href="#solid-4"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-5" href="#solid-5"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-6" href="#solid-6"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-7" href="#solid-7"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-8" href="#solid-8"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-9" href="#solid-9"></a></div>
-							<div class="square unit unit-s-1-4"><a class="solid-10" href="#solid-10"></a></div>
+						<div class="grid colours solidswatches">
 						</div>
 					</div>
+					<script id="solids-template" type="x-tmpl-mustache">
+						{{#solids}}
+							<div class="square unit unit-s-1-4"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+						{{/solids}}
+					</script>
 
 					<div class="swatch" id="tab-2" hidden>
-						<div class="grid island-1-2 colors">
-							<div class="square unit unit-s-1-4"><a class="pattern-1" href="#ff0"></a></div>
-							<div class="square unit unit-s-1-4"><a class="pattern-2" href="#0ff"></a></div>
-							<div class="square unit unit-s-1-4"><a class="pattern-3" href="#f0f"></a></div>
+						<div class="grid colours patternswatches">
 						</div>
 					</div>
+					<script id="patterns-template" type="x-tmpl-mustache">
+						{{#patterns}}
+							<div class="square unit unit-s-1-4"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+						{{/patterns}}
+					</script>
 
 					<div class="swatch" id="tab-3" hidden>
-						<div class="grid island-1-2 colors">
-							<div class="square unit unit-s-1-4"><a class="texture-1" href="#eee"></a></div>
-							<div class="square unit unit-s-1-4"><a class="texture-2" href="#222"></a></div>
+						<div class="grid colours textureswatches">
 						</div>
 					</div>
+					<script id="textures-template" type="x-tmpl-mustache">
+						{{#textures}}
+							<div class="square unit unit-s-1-4"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+						{{/textures}}
+					</script>
 
 					<div class="swatch" id="tab-4" hidden>
-						<div class="grid island-1-2 colors">
-							<div class="square unit unit-s-1-4"><a class="stripe-1" href="img/stripe-1.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-2" href="img/stripe-2.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-3" href="img/stripe-3.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-4" href="img/stripe-4.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-5" href="img/stripe-5.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-6" href="img/stripe-6.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-7" href="img/stripe-7.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-8" href="img/stripe-8.jpg"></a></div>
-							<div class="square unit unit-s-1-4"><a class="stripe-9" href="img/stripe-9.jpg"></a></div>
+						<div class="grid colours stripeswatches">
 						</div>
 					</div>
+					<script id="stripes-template" type="x-tmpl-mustache">
+						{{#stripes}}
+							<div class="square unit unit-s-1-4"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+						{{/stripes}}
+					</script>
 
 				</div><!--swatch windows end -->
 
 				<div class="reset">
 					<a href="">Reset</a>
 				</div>
+
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="button">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<table class="style">
+					<tr><td><input type="hidden" name="on0" value="style"></td></tr><tr><td><input type="hidden" name="os0" maxlength="200" class="style-info"></td></tr>
+					</table>
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+					">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
+
+
+					<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+						">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+
+
 
 			</div><!--picker ui end-->
 		</div><!--picker menu end-->
@@ -168,8 +200,12 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+	<script src="js/moustache.min.js"></script>
+	<script src="js/swatch-data.js"></script>
+	<script src="js/swatch-template.js"></script>
 	<script src="js/tabs.js"></script>
 	<script src="js/picker.js"></script>
 	<script src="galleria/galleria-1.4.2.min.js"></script>
+
 </body>
 </html>

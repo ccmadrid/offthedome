@@ -1,0 +1,14 @@
+.solid-1, .solid-2, .solid-3, .solid-4, .solid-5, .solid-6, .solid-7, .solid-8, .solid-9, .solid-10,
+.pattern-1, .pattern-2, .pattern-3, .pattern-4, .pattern-5, .pattern-6, .pattern-7, .pattern-8, .pattern-9, .pattern-10,
+.texture-1, .texture-2, .texture-3, .texture-4, .texture-5, .texture-6, .texture-7, .texture-8, .texture-9, .texture-10,
+.stripes-1, .stripes-2, .stripes-3, .stripes-4, .stripes-5, .stripes-6, .stripes-7, .stripes-8, .stripes-9, .stripes-10 {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+}

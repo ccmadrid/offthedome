@@ -1,6 +1,6 @@
 var $swatch = $('.square');
 var $5panel = $('.5panel');
-var $panel = 'js-currentPanel';
+var $panel = $('.js-currentPanel');
 var $panelId = 'front';
 var $brim = $('.brim');
 var $topLeft = $('.top-left');
@@ -9,6 +9,8 @@ var $sideLeft = $('.side-left');
 var $sideRight = $('.side-right');
 var $front = $('.front');
 var $reset = $('.reset');
+var $button = $('.button');
+
 
 $5panel.on('click', 'path', function (e) {
 	var $panelId = $(this).attr('id');
@@ -17,35 +19,37 @@ $5panel.on('click', 'path', function (e) {
 	var $prevPanelId = $prevPanel.attr('id');
 
 	if ($panelId != $prevPanelId){
-	console.log('the previous panel was ' + $prevPanelId)
+
 	var $prevPanelId = $prevPanel.attr('id');
 
 	$5panel.find('.js-currentPanel').removeAttr('class').attr('class', $prevPanelId);
 	$(this).attr('class', $panel + ' js-currentPanel ');
-
-	console.log('clicked ' + $panel);
-	console.log($(this).attr('class'));
 	}
 });
 
 $swatch.on('click', 'a', function (e) {
 	e.preventDefault();
 
-	$swatchId = $(this).attr('href');
+	var $swatchId = $(this).attr('href');
+	var $swatchColour = $(this).attr('data-colour');
 
-	console.log($swatchId);
+	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
 
-	// $5panel.find('.js-currentPanel').css('fill', $swatchId);
-	// $5panel.find('.js-currentPanel').css('fill', 'url("' + $swatchId + '")');
-	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')');
+	if ($brim.attr('data-colour') != 'none' && $topLeft.attr('data-colour') != 'none' && $topRight.attr('data-colour') != 'none' && $sideLeft.attr('data-colour') != 'none' && $sideRight.attr('data-colour') != 'none' && $front.attr('data-colour') != 'none') {
+		console.log('brim: ' + $brim.attr('data-colour'));
+		console.log('top-left: ' + $topLeft.attr('data-colour'));
+		console.log('top-right: ' + $topRight.attr('data-colour'));
+		console.log('side-left: ' + $sideLeft.attr('data-colour'));
+		console.log('side-right: ' + $sideRight.attr('data-colour'));
+		console.log('front: ' + $front.attr('data-colour'));
 
-	console.log('this is the color of ' + $5panel.find('.js-currentPanel').attr('id') + ': ' + $swatchId);
-	console.log('brim: ' + $brim.css('fill'));
-	console.log('top-left: ' + $topLeft.css('fill'));
-	console.log('top-right: ' + $topRight.css('fill'));
-	console.log('side-left: ' + $sideLeft.css('fill'));
-	console.log('side-right: ' + $sideRight.css('fill'));
-	console.log('front: ' + $front.css('fill'));
+		$('.style-info').attr('value', 'brim: ' + $brim.attr('data-colour')
+			+ ' / top-left: ' + $topLeft.attr('data-colour')
+			+ ' / top-right: ' + $topRight.attr('data-colour')
+			+ ' / side-left: ' + $sideLeft.attr('data-colour')
+			+ ' / side-right: ' + $sideRight.attr('data-colour')
+			+ ' / front: ' + $front.attr('data-colour'));
+	}
 
 });
 
@@ -58,6 +62,17 @@ $reset.on('click', 'a', function (e) {
 	$sideLeft.css('fill', '#fff');
 	$sideRight.css('fill', '#fff');
 	$front.css('fill', '#fff')
-
+	$brim.attr('data-colour','none');
+	$topLeft.attr('data-colour','none');
+	$topRight.attr('data-colour','none');
+	$sideLeft.attr('data-colour','none');
+	$sideRight.attr('data-colour','none');
+	$front.attr('data-colour','none')
 	console.log('colours reset to white')
+	console.log('brim: ' + $brim.attr('data-colour'));
+	console.log('top-left: ' + $topLeft.attr('data-colour'));
+	console.log('top-right: ' + $topRight.attr('data-colour'));
+	console.log('side-left: ' + $sideLeft.attr('data-colour'));
+	console.log('side-right: ' + $sideRight.attr('data-colour'));
+	console.log('front: ' + $front.attr('data-colour'));
 });

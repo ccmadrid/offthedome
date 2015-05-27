@@ -341,24 +341,27 @@ body{
 /*============================================================================*/
 /*================================PANEL PICKER================================*/
 /*============================================================================*/
+.hat-area {
+
+}
 .panel-picker {
-	background-color: #eee;
-	overflow: hidden;
+
 }
 
 .picker-menu{
-	background-color: #eee;
-	position: relative;
+
 }
 
 .picker-ui {
 	position: absolute;
 	width: 100%;
-	top: 50%;
-	transform: translateY(-50%);
+/*	top: 50%;
+	transform: translateY(-50%);*/
 }
 
 .panel-picker, .picker-menu {
+	position: relative;
+	background-color: #eee;
 	display: block;
 	margin: 0;
 /*	border: solid 2px #ccc;*/
@@ -366,11 +369,12 @@ body{
 
 .square {
 	margin: 2px;
-	border: solid 2px #000;
+	border: solid 0px #000;
 	height: 3em;
 	width: 3em;
 	position: relative;
-	display: block;
+	display: block;;
+	border-radius: 3em;
 }
 
 [hidden] {
@@ -389,7 +393,7 @@ body{
 
 .tabs a {
 	display: block;
-	padding: 1em 0;
+	padding: 0.75em 0;
 	border-top: solid 2px #ccc;
 	border-bottom: solid 2px #ccc;
 	border-left: solid 2px #ccc;
@@ -398,6 +402,7 @@ body{
 	text-decoration: none;
 	color: #000;
 	border-right-width: 0px;
+	font-size: 0.75em;
 }
 
 .tabs:last-child {
@@ -414,87 +419,30 @@ body{
 
 .js-current {
 	border-bottom: none;
+	background-color: #ccc
 }
 
-.colors {
+.colours {
 	border: solid 2px #ccc;
 	border-top-width: 0;
-}
-
-.solid-1, .solid-2, .solid-3, .solid-4, .solid-5, .solid-6, .solid-7, .solid-8, .solid-9, .solid-10,
-.pattern-1, .pattern-2, .pattern-3,
-.texture-1, .texture-2,
-.stripe-1, .stripe-2, .stripe-3, .stripe-4, .stripe-5, .stripe-6, .stripe-7, .stripe-8, .stripe-9 {
-	position: absolute;
-	display: block;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #fff;
-}
-
-.solid-1 {
-	background: url('../img/solid-1.jpg');
-}
-.solid-2 {
-	background: url('../img/solid-2.jpg');
-}
-.solid-3 {
-	background: url('../img/solid-3.jpg');
-}
-.solid-4 {
-	background: url('../img/solid-4.jpg');
-}
-.solid-5 {
-	background: url('../img/solid-5.jpg');
-}
-.solid-6 {
-	background: url('../img/solid-6.jpg');
-}
-.solid-7 {
-	background: url('../img/solid-7.jpg');
-}
-.solid-8 {
-	background: url('../img/solid-8.jpg');
-}
-.solid-9 {
-	background: url('../img/solid-9.jpg');
-}
-.solid-10 {
-	background: url('../img/solid-10.jpg');
-}
-
-.pattern-1 {
-	background-color: #ff0;
-}
-.pattern-2 {
-	background-color: #0ff;
-}
-.pattern-3 {
-	background-color: #f0f;
-}
-
-.texture-1 {
-	background-color: #eee;
-}
-.texture-2 {
-	background-color: #222;
+	padding: 0.5em;
 }
 
 .brim, .front, .side-left, .side-right, .top-left, .top-right {
 	cursor: pointer;
 	fill: #fff;
 	stroke: #aaa;
+	transition: all 100ms ease-out ;
+}
+
+.brim:hover, .front:hover, .side-left:hover, .side-right:hover, .top-left:hover, .top-right:hover {
+	stroke-width: 2px;
 }
 
 .js-currentPanel {
 	fill: #fff;
 	stroke: #444;
 	stroke-width: 2px;
-
 }
 
 .reset {
@@ -513,12 +461,9 @@ body{
 /*============================================================================*/
 
 
-/*#brim {
-	fill: url(#img1);
+/*.style {
+	display: none;
 }*/
-
-
-
 
 
 
