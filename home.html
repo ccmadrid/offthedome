@@ -12,9 +12,9 @@
 <body class="home">
 
 <header class="header">
-	<div class="logo">
-	</div>
-
+	<a class="logo" href="">
+	</a>
+	<img class="nav-btn" src="img/icon-nav.svg" alt="toggle">
 	<div class="navigation">
 		<ul class="nav-list grid">
 			<li class="unit"><a href="">Item 1</a></li>
@@ -129,12 +129,12 @@
 					</div>
 					<script id="solids-template" type="x-tmpl-mustache">
 						{{#solids}}
-							<div class="square unit unit-s-1-4"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+							<div class="square"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
 						{{/solids}}
 					</script>
 
 					<div class="swatch" id="tab-2" hidden>
-						<div class="colours patternswatches">
+						<div class="grid colours patternswatches">
 						</div>
 					</div>
 					<script id="patterns-template" type="x-tmpl-mustache">

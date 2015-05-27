@@ -31,13 +31,17 @@ body{
 }
 
 .logo {
-	display: none;
-	margin: 1em;
-	z-index: 10;
+	margin: 0.5em;
+	z-index: 21;
 	position: absolute;
 	background-color: #fff;
-	height: 4em;
-	width: 4em;
+	height: 3em;
+	width: 3em;
+	background: url(../img/logo-01.png);
+	background-size: contain;
+	border-radius: 1.5em;
+	overflow: hidden;
+	left: calc(50% - 2em);
 }
 
 .main {
@@ -46,6 +50,7 @@ body{
 	position: relative;
 	overflow: hidden;
 }
+
 
 /*============================================================================*/
 /*==============================COMING SOON PAGE==============================*/
@@ -119,41 +124,90 @@ body{
 /*============================================================================*/
 /*=================================NAVIGATION=================================*/
 /*============================================================================*/
-.navigation {
-	display: block;
-	position: relative;
+	.navigation {
+		display: block;
+		position: relative;
+		height: 4em;
+		padding: 0;
+		background-color: #fff;
+	/*	box-shadow: 0px 5px 5px #fff;*/
+		z-index: 20;
+	}
+
+	.nav-list {
+		position: relative;
+		top: 4em;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: all 250ms ease-out;
+		transition: all 250ms ease-out;
+	}
+
+	.nav-list li {
+		display: block;
+		padding: 0.5em;
+		width: 100%;
+		background-color: #fff;
+		text-align: center;
+	}
+
+	.nav-list a {
+		padding: 1em;
+		text-decoration: none;
+		color: #000;
+		transition: all 200ms ease-out;
+	}
+
+	.nav-list a:hover {
+		color: #ccc;
+	}
+
+.nav-btn {
+	z-index: 21;
 	height: 4em;
-	padding: 1em;
-	background-color: #fff;
-	overflow: hidden;
-	box-shadow: 0px 5px 5px #fff;
-	z-index: 20;
-}
-
-.nav-list {
+	display: block;
 	position: absolute;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+	right: 1em;
 }
 
-.nav-list li {
-	display: inline-block;
-	padding: 0.5em;
+.js-menu-open {
+	max-height: 100vh;
 }
+@media only screen and (min-width: 38em) {
+	.navigation {
+		display: block;
+		position: relative;
+		height: 4em;
+		padding: 1em;
+		background-color: #fff;
+		overflow: hidden;
+	/*	box-shadow: 0px 5px 5px #fff;*/
+		z-index: 20;
+	}
 
-.nav-list a {
-	padding: 1em;
-	text-decoration: none;
-	color: #000;
-	transition: all 200ms ease-out;
-}
+	.nav-list {
+		top: 0.75em;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		left: 5em;
+		transform: none;
+	}
 
-.nav-list a:hover {
-	color: #ccc;
+	.nav-list li {
+		display: inline-block;
+		padding: 0.5em;
+		width: auto;
+	}
+
 }
 /*============================================================================*/
 /*=================================BILLBOARD==================================*/
@@ -191,7 +245,7 @@ body{
 	font-size: 2em;
 	letter-spacing: -2px;
 	color: #fff;
-	line-height: 1em;
+	line-height: 0.5em;
 }
 
 .title-2 {
@@ -316,6 +370,8 @@ body{
 	position: relative;
 	display: block;;
 	border-radius: 3em;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
 }
 
 [hidden] {
@@ -423,14 +479,16 @@ body{
 
 @media only screen and (min-width: 25em) {
 	.title {
-		font-size: 3em;
+		font-size: 2.5em;
+		line-height: 1em;
 	}
 	.title-2 {
 		font-size: 1.5em;
 	}
 	.hook {
-		font-size: 1em;
+		font-size: 0.75em;
 		letter-spacing: 13px;
+		line-height: 0;
 	}
 	.hook-2 {
 		font-size: 1.5em;
@@ -473,6 +531,10 @@ body{
 		top: 50%;
 		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
+	}
+
+	.logo {
+		left: 1em;
 	}
 
 }
