@@ -517,9 +517,9 @@ body{
 		width: 3em;
 	}
 		.picker-ui {
-		top: 50%;
+/*		top: 50%;
 		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
+		transform: translateY(-50%);*/
 	}
 
 	.logo {
