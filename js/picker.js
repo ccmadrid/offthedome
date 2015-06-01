@@ -10,6 +10,7 @@ var $sideRight = $('.side-right');
 var $front = $('.front');
 var $reset = $('.reset');
 var $button = $('.button');
+var $label = $('.label');
 
 
 $5panel.on('click', 'path', function (e) {
@@ -23,8 +24,16 @@ $5panel.on('click', 'path', function (e) {
 	var $prevPanelId = $prevPanel.attr('id');
 
 	$5panel.find('.js-currentPanel').removeAttr('class').attr('class', $prevPanelId);
-	$(this).attr('class', $panel + ' js-currentPanel ');
+	$(this).attr('class', $panel + 'js-currentPanel ');
 	}
+});
+
+$swatch.on('mouseover', function () {
+	$(this).find('.label').addClass('js-show-label');
+});
+
+$swatch.on('mouseout', function () {
+	$(this).find('.label').removeClass('js-show-label');
 });
 
 $swatch.on('click', 'a', function (e) {

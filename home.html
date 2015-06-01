@@ -28,7 +28,7 @@
 
 <main class="main">
 	<div class="billboard">
-		<img src="img/ddbc-5.jpg" alt="billboard">
+		<img src="img/billboard.jpg" alt="billboard">
 		<div class="inner">
 			<p class="welcome">Welcome to</p>
 			<h1 class="title">OFF THE DOME</h1>
@@ -129,7 +129,10 @@
 					</div>
 					<script id="solids-template" type="x-tmpl-mustache">
 						{{#solids}}
-							<div class="square"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+							<div class="square">
+								<div class="unit label"><p class="micro">{{colour}}</p></div>
+								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
+							</div>
 						{{/solids}}
 					</script>
 
@@ -139,7 +142,12 @@
 					</div>
 					<script id="patterns-template" type="x-tmpl-mustache">
 						{{#patterns}}
-							<div class="square"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+							<div class="square">
+								<div class="unit label">
+									<p class="micro">{{colour}}</p>
+								</div>
+								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
+							</div>
 						{{/patterns}}
 					</script>
 
@@ -149,7 +157,12 @@
 					</div>
 					<script id="textures-template" type="x-tmpl-mustache">
 						{{#textures}}
-							<div class="square"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+							<div class="square">
+								<div class="unit label">
+									<p class="micro">{{colour}}</p>
+								</div>
+								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
+							</div>
 						{{/textures}}
 					</script>
 
@@ -159,7 +172,11 @@
 					</div>
 					<script id="stripes-template" type="x-tmpl-mustache">
 						{{#stripes}}
-							<div class="square"><a class="{{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a></div>
+							<div class="square"><div class="unit label">
+								<p class="micro">{{colour}}</p>
+							</div>
+								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
+							</div>
 						{{/stripes}}
 					</script>
 
