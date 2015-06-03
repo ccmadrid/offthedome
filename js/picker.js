@@ -24,16 +24,8 @@ $5panel.on('click', 'path', function (e) {
 	var $prevPanelId = $prevPanel.attr('id');
 
 	$5panel.find('.js-currentPanel').removeAttr('class').attr('class', $prevPanelId);
-	$(this).attr('class', $panel + 'js-currentPanel ');
+	$(this).attr('class', $panel + ' js-currentPanel ');
 	}
-});
-
-$swatch.on('mouseover', function () {
-	$(this).find('.label').addClass('js-show-label');
-});
-
-$swatch.on('mouseout', function () {
-	$(this).find('.label').removeClass('js-show-label');
 });
 
 $swatch.on('click', 'a', function (e) {
@@ -93,4 +85,12 @@ $reset.on('click', 'a', function (e) {
 	console.log('side-right: ' + $sideRight.attr('data-colour'));
 	console.log('front: ' + $front.attr('data-colour'));
 	document.getElementById('add-to-cart').style.visibility = "hidden";
+});
+
+$swatch.on('mouseover', function () {
+	$(this).find('.label').addClass('js-show-label');
+});
+
+$swatch.on('mouseout', function () {
+	$(this).find('.label').removeClass('js-show-label');
 });
