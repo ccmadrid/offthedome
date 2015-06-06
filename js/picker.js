@@ -60,10 +60,7 @@ $swatch.on('click', 'a', function (e) {
 			+ ' / side-left: ' + $sideLeft.attr('data-colour')
 			+ ' / side-right: ' + $sideRight.attr('data-colour')
 			+ ' / front: ' + $front.attr('data-colour'));
-
-
 	}
-
 });
 
 $reset.on('click', 'a', function (e) {
@@ -98,3 +95,4 @@ $swatch.on('mouseover', function () {
 $swatch.on('mouseout', function () {
 	$(this).find('.label').removeClass('js-show-label');
 });
+
