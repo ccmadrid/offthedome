@@ -355,6 +355,7 @@ body{
 	position: relative;
 	left: 50%;
 	width: 20em;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
