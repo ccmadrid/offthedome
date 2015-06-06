@@ -11,7 +11,7 @@ var $front = $('.front');
 var $reset = $('.reset');
 var $button = $('.button');
 var $label = $('.label');
-
+var $5panelPreview = $('.5panel-preview');
 
 $5panel.on('click', 'path', function (e) {
 	var $panelId = $(this).attr('id');
@@ -25,6 +25,9 @@ $5panel.on('click', 'path', function (e) {
 
 	$5panel.find('.js-currentPanel').removeAttr('class').attr('class', $prevPanelId);
 	$(this).attr('class', $panel + ' js-currentPanel ');
+
+	$5panelPreview.find('.js-currentPanel').removeAttr('class').attr('class', $prevPanelId);
+	$5panelPreview.find('.' + $panel).attr('class', $panel + ' js-currentPanel ');
 	}
 });
 
@@ -35,6 +38,7 @@ $swatch.on('click', 'a', function (e) {
 	var $swatchColour = $(this).attr('data-colour');
 
 	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
+	$5panelPreview.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
 
 	if ($brim.attr('data-colour') != 'none'
 		&& $topLeft.attr('data-colour') != 'none'
