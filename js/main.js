@@ -28,7 +28,6 @@ function goForward() {
 				currentSlide = 1;
 				$slideContainer.css('margin-left', 0);
 			}
-			console.log(currentSlide);
 		});
 }
 
@@ -38,7 +37,6 @@ function goBackward() {
 				currentSlide = $test2;
 				$slideContainer.css('margin-left', ($test) + 'em');
 			}
-			console.log(currentSlide);
 		});
 }
 console.log

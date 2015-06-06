@@ -422,7 +422,7 @@ body{
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	width: 1000%;
+	width: 300%;
 }
 
 .tabs li {
@@ -628,4 +628,19 @@ overflow-x: scroll;
 .js-show-label {
 	height: 2em;
 	padding: 0.25em;
+}
+
+.thread-area, .buckle-area {
+	height: 20em;
+	border: solid 2px #888;
+	padding: 1em;
+	position: relative;
+}
+
+.thread {
+	margin: 2em;
+	border: none;
+	border-top: dashed;
+	color: #fff;
+
 }

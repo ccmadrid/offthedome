@@ -184,78 +184,78 @@
 			<div class="picker-ui">
 				<div class="tabs-bar">
 					<ul class="tabs">
-						<li class=""><a class="js-current" href="#tab-1">Solids</a></li>
-						<li class=""><a href="#tab-2">Patterns</a></li>
-						<li class=""><a href="#tab-3">Textures</a></li>
-						<li class=""><a href="#tab-4">Stripes</a></li>
-						<li class=""><a href="#tab-2">Patterns</a></li>
-						<li class=""><a href="#tab-3">Textures</a></li>
-						<li class=""><a href="#tab-4">Stripes</a></li>
-						<li class=""><a href="#tab-2">Patterns</a></li>
-						<li class=""><a href="#tab-3">Textures</a></li>
-						<li class=""><a href="#tab-4">Stripes</a></li>
-						<li class=""><a href="#tab-2">Patterns</a></li>
-						<li class=""><a href="#tab-3">Textures</a></li>
-						<li class=""><a href="#tab-4">Stripes</a></li>
+						<li class=""><a class="js-current" href="#tab-01">style 01</a></li>
+						<li class=""><a href="#tab-02">style 02</a></li>
+						<li class=""><a href="#tab-03">style 03</a></li>
+						<li class=""><a href="#tab-04">style 04</a></li>
+						<li class=""><a href="#tab-05">style 05</a></li>
+						<li class=""><a href="#tab-06">style 06</a></li>
+						<li class=""><a href="#tab-07">style 07</a></li>
+						<li class=""><a href="#tab-08">style 08</a></li>
+						<li class=""><a href="#tab-09">style 09</a></li>
+						<li class=""><a href="#tab-10">style 10</a></li>
+						<li class=""><a href="#tab-11">style 11</a></li>
+						<li class=""><a href="#tab-12">style 12</a></li>
+						<li class=""><a href="#tab-13">style 13</a></li>
 					</ul><!--swatch tabs end-->
 				</div>
 
 				<div class="tab-swatches">
 
-					<div class="swatch" id="tab-1">
-						<div class="grid colours solidswatches">
-						</div>
+					<div class="swatch" id="tab-01">
+						<ul class="grid colours solidswatches">
+						</ul>
 					</div>
 					<script id="solids-template" type="x-tmpl-mustache">
 						{{#solids}}
-							<div class="square">
+							<li class="square">
 								<div class="unit label"><p class="micro">{{colour}}</p></div>
 								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
-							</div>
+							</li>
 						{{/solids}}
 					</script>
 
-					<div class="swatch" id="tab-2" hidden>
-						<div class="grid colours patternswatches">
-						</div>
+					<div class="swatch" id="tab-02" hidden>
+						<ul class="grid colours patternswatches">
+						</ul>
 					</div>
 					<script id="patterns-template" type="x-tmpl-mustache">
 						{{#patterns}}
-							<div class="square">
+							<li class="square">
 								<div class="unit label">
 									<p class="micro">{{colour}}</p>
 								</div>
 								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
-							</div>
+							</li>
 						{{/patterns}}
 					</script>
 
-					<div class="swatch" id="tab-3" hidden>
-						<div class="grid colours textureswatches">
-						</div>
+					<div class="swatch" id="tab-03" hidden>
+						<ul class="grid colours textureswatches">
+						</ul>
 					</div>
 					<script id="textures-template" type="x-tmpl-mustache">
 						{{#textures}}
-							<div class="square">
+							<li class="square">
 								<div class="unit label">
 									<p class="micro">{{colour}}</p>
 								</div>
 								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
-							</div>
+							</li>
 						{{/textures}}
 					</script>
 
-					<div class="swatch" id="tab-4" hidden>
-						<div class="grid colours stripeswatches">
-						</div>
+					<div class="swatch" id="tab-04" hidden>
+						<ul class="grid colours stripeswatches">
+						</ul>
 					</div>
 					<script id="stripes-template" type="x-tmpl-mustache">
 						{{#stripes}}
-							<div class="square"><div class="unit label">
+							<li class="square"><div class="unit label">
 								<p class="micro">{{colour}}</p>
 							</div>
 								<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
-							</div>
+							</li>
 						{{/stripes}}
 					</script>
 
@@ -285,6 +285,22 @@
 
 			</div><!--picker ui end-->
 		</div><!--picker menu end-->
+		<div class="thread-area unit unit-xs-1 unit-m-1-2">
+			<hr class="thread">
+			<div class="thread-menu">
+				<script id="solids-template" type="x-tmpl-mustache">
+					{{#solids}}
+						<div class="square">
+							<div class="unit label"><p class="micro">{{colour}}</p></div>
+							<a class="swatch-link {{swatchId}}" href="#{{swatchId}}" data-swatchtype="{{swatchType}}" data-colour="{{colour}}" style="background:url('img/{{swatchId}}.jpg');"></a>
+						</div>
+					{{/solids}}
+				</script>
+			</div>
+		</div><!--thread area end-->
+
+		<div class="buckle-area unit unit-xs-1 unit-m-1-2">
+		</div><!--buckle area end-->
 	</div><!--hat area end-->
 </main>
 

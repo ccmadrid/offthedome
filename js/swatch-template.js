@@ -1,28 +1,51 @@
-var solidsTemplate = $('#solids-template').html();
-Mustache.parse(solidsTemplate);
-var solidsRendered = Mustache.render(solidsTemplate, solids);
-$('.solidswatches').html(solidsRendered);
+var swatchIndex= []; //holds the names of the styles in the order that they appear in the data file
+var icount = 0; //used to count how many styles are in the style data file
+var swatchIndexTemplate = []; //holds the information for ___-template class
+var swatchClass = [] //holds the class info for moustache templating the html
 
-var patternsTemplate = $('#patterns-template').html();
-Mustache.parse(patternsTemplate);
-var patternsRendered = Mustache.render(patternsTemplate, patterns);
-$('.patternswatches').html(patternsRendered);
+$.each(swatches, function(index, value) {
+  swatchIndex[icount] = index;
+  icount++;
+});
 
-var texturesTemplate = $('#textures-template').html();
-Mustache.parse(texturesTemplate);
-var texturesRendered = Mustache.render(texturesTemplate, textures);
-$('.textureswatches').html(texturesRendered);
+$.each(swatchIndex, function(position, value) {
+  swatchIndexTemplate[position] = '#' + value + '-template';
+  swatchClass[position] = '.' + value + 'watches';
+});
 
-var stripesTemplate = $('#stripes-template').html();
-Mustache.parse(stripesTemplate);
-var stripesRendered = Mustache.render(stripesTemplate, stripes);
-$('.stripeswatches').html(stripesRendered);
+for( i = 0; i < icount; i++){
+var template = $(swatchIndexTemplate[i]).html();
+Mustache.parse(template);
+var rendered = Mustache.render(template, swatches);
+$(swatchClass[i]).html(rendered);
+};
+
+// var solidsTemplate = $('#solids-template').html();
+// Mustache.parse(solidsTemplate);
+// var solidsRendered = Mustache.render(solidsTemplate, swatches);
+// $('.solidswatches').html(solidsRendered);
+
+// var patternsTemplate = $('#patterns-template').html();
+// Mustache.parse(patternsTemplate);
+// var patternsRendered = Mustache.render(patternsTemplate, swatches);
+// $('.patternswatches').html(patternsRendered);
+
+// var texturesTemplate = $('#textures-template').html();
+// Mustache.parse(texturesTemplate);
+// var texturesRendered = Mustache.render(texturesTemplate, swatches);
+// $('.textureswatches').html(texturesRendered);
+
+// var stripesTemplate = $('#stripes-template').html();
+// Mustache.parse(stripesTemplate);
+// var stripesRendered = Mustache.render(stripesTemplate, swatches);
+// $('.stripeswatches').html(stripesRendered);
+
 
 // Find the <def> tag for the solid fills
 var solidFills = document.querySelector('.solid-fills');
 
 // Loop over all the solid fills from the `swatch-data.js` file
-solids.solids.forEach(function (elem, index) {
+swatches.solids.forEach(function (elem, index) {
   // Create a new SVG `pattern` element
   var pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
   // Populate its attributes with the correct information
@@ -49,7 +72,7 @@ solids.solids.forEach(function (elem, index) {
 var patternFills = document.querySelector('.pattern-fills');
 
 // Loop over all the pattern fills from the `swatch-data.js` file
-patterns.patterns.forEach(function (elem, index) {
+swatches.patterns.forEach(function (elem, index) {
   // Create a new SVG `pattern` element
   var pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
   // Populate its attributes with the correct information
@@ -75,7 +98,7 @@ patterns.patterns.forEach(function (elem, index) {
 var textureFills = document.querySelector('.texture-fills');
 
 // Loop over all the texture fills from the `swatch-data.js` file
-textures.textures.forEach(function (elem, index) {
+swatches.textures.forEach(function (elem, index) {
   // Create a new SVG `pattern` element
   var pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
   // Populate its attributes with the correct information
@@ -101,7 +124,7 @@ textures.textures.forEach(function (elem, index) {
 var stripeFills = document.querySelector('.stripe-fills');
 
 // Loop over all the texture fills from the `swatch-data.js` file
-stripes.stripes.forEach(function (elem, index) {
+swatches.stripes.forEach(function (elem, index) {
   // Create a new SVG `pattern` element
   var pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
   // Populate its attributes with the correct information
