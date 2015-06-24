@@ -736,3 +736,8 @@ svg {
 	background-repeat: no-repeat;
 	background-position: right;
 }
+
+.thread-preview {
+	stroke: #000;
+	fill: none;
+}
