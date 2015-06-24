@@ -642,5 +642,97 @@ overflow-x: scroll;
 	border: none;
 	border-top: dashed;
 	color: #fff;
+}
 
+.5panel-preview {
+	max-height: 100%;
+}
+
+svg {
+	max-height: 100%;
+}
+
+.back-menu {
+	width: 100%;
+}
+
+.back-menu option {
+	height: 4em;
+}
+
+.back-menu option[value="yellow-snap"] {
+	background: url(../img/strap-yellow.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.back-menu option[value="white-snap"] {
+	background: url(../img/strap-white.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.back-menu option[value="tan-snap"] {
+	background: url(../img/strap-tan.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.back-menu option[value="royal-snap"] {
+	background: url(../img/strap-royal.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.back-menu option[value="red-snap"] {
+	background: url(../img/strap-red.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="purple-snap"] {
+	background: url(../img/strap-purple.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="maroon-snap"] {
+	background: url(../img/strap-maroon.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="kelly-snap"] {
+	background: url(../img/strap-kelly.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="grey-snap"] {
+	background: url(../img/strap-grey.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="forest-snap"] {
+	background: url(../img/strap-forest.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="brown-snap"] {
+	background: url(../img/strap-brown.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="black-snap"] {
+	background: url(../img/strap-black.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
 }

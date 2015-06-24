@@ -12,6 +12,7 @@ var $reset = $('.reset');
 var $button = $('.button');
 var $label = $('.label');
 var $5panelPreview = $('.5panel-preview');
+var $threadMenu = ('.thread-menu')
 
 $5panel.on('click', 'path', function (e) {
 	var $panelId = $(this).attr('id');
@@ -31,6 +32,11 @@ $5panel.on('click', 'path', function (e) {
 	}
 });
 
+function getMenu(id) {
+   var sel = document.getElementById(id);
+   return sel.options[sel.selectedIndex].value;
+};
+
 $swatch.on('click', 'a', function (e) {
 	e.preventDefault();
 
@@ -39,6 +45,7 @@ $swatch.on('click', 'a', function (e) {
 
 	$5panel.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
 	$5panelPreview.find('.js-currentPanel').attr('style', 'fill: url(' + $swatchId + ')').attr('data-colour', $swatchColour);
+
 
 	if ($brim.attr('data-colour') != 'none'
 		&& $topLeft.attr('data-colour') != 'none'
@@ -53,14 +60,53 @@ $swatch.on('click', 'a', function (e) {
 		console.log('side-left: ' + $sideLeft.attr('data-colour'));
 		console.log('side-right: ' + $sideRight.attr('data-colour'));
 		console.log('front: ' + $front.attr('data-colour'));
+		console.log('thread: ' + getMenu('thread-menu'));
+		console.log('back: ' + getMenu('back-menu'))
 
 		$('.style-info').attr('value', 'brim: ' + $brim.attr('data-colour')
 			+ ' / top-left: ' + $topLeft.attr('data-colour')
 			+ ' / top-right: ' + $topRight.attr('data-colour')
 			+ ' / side-left: ' + $sideLeft.attr('data-colour')
 			+ ' / side-right: ' + $sideRight.attr('data-colour')
-			+ ' / front: ' + $front.attr('data-colour'));
+			+ ' / front: ' + $front.attr('data-colour')
+			+ ' / thread: ' + getMenu('thread-menu')
+			+ ' / back: ' + getMenu('back-menu'));
 	}
+
+	$('.thread-menu').change(function() {
+		$('.style-info').attr('value', 'brim: ' + $brim.attr('data-colour')
+			+ ' / top-left: ' + $topLeft.attr('data-colour')
+			+ ' / top-right: ' + $topRight.attr('data-colour')
+			+ ' / side-left: ' + $sideLeft.attr('data-colour')
+			+ ' / side-right: ' + $sideRight.attr('data-colour')
+			+ ' / front: ' + $front.attr('data-colour')
+			+ ' / thread: ' + getMenu('thread-menu')
+			+ ' / back: ' + getMenu('back-menu'));
+	});
+
+	$('.back-menu').change(function() {
+		$('.style-info').attr('value', 'brim: ' + $brim.attr('data-colour')
+			+ ' / top-left: ' + $topLeft.attr('data-colour')
+			+ ' / top-right: ' + $topRight.attr('data-colour')
+			+ ' / side-left: ' + $sideLeft.attr('data-colour')
+			+ ' / side-right: ' + $sideRight.attr('data-colour')
+			+ ' / front: ' + $front.attr('data-colour')
+			+ ' / thread: ' + getMenu('thread-menu')
+			+ ' / back: ' + getMenu('back-menu'));
+
+	});
+
+});
+
+$('.thread').css('color', getMenu('thread-menu'));
+
+$('.thread-menu').change(function() {
+			console.log('thread changed: ' + getMenu('thread-menu'));
+		$('.thread').css('color', getMenu('thread-menu'));
+});
+
+$('.back-menu').change(function() {
+			console.log('backchanged: ' + getMenu('back-menu'));
 });
 
 $reset.on('click', 'a', function (e) {
@@ -95,4 +141,5 @@ $swatch.on('mouseover', function () {
 $swatch.on('mouseout', function () {
 	$(this).find('.label').removeClass('js-show-label');
 });
+
 
