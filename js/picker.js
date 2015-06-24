@@ -99,10 +99,12 @@ $swatch.on('click', 'a', function (e) {
 });
 
 $('.thread').css('color', getMenu('thread-menu'));
+$('.thread-preview').css('stroke', getMenu('thread-menu'));
 
 $('.thread-menu').change(function() {
 			console.log('thread changed: ' + getMenu('thread-menu'));
 		$('.thread').css('color', getMenu('thread-menu'));
+		$('.thread-preview').css('stroke', getMenu('thread-menu'));
 });
 
 $('.back-menu').change(function() {
