@@ -108,7 +108,7 @@ $('.thread-menu').change(function() {
 });
 
 $('.back-menu').change(function() {
-			console.log('backchanged: ' + getMenu('back-menu'));
+			console.log('back changed: ' + getMenu('back-menu'));
 });
 
 $reset.on('click', 'a', function (e) {
