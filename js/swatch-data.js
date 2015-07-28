@@ -2,52 +2,57 @@ var swatches = {
 	solids: [
 		{
 			swatchId: 'solid-1',
-			colour: 'red',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-2',
-			colour: 'orange',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-3',
-			colour: 'yellow',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-4',
-			colour: 'green',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-5',
-			colour: 'mint',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-6',
-			colour: 'blue',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-7',
-			colour: 'purple',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-8',
-			colour: 'pink',
-			swatchType: 'solid'
-		},
-		{
-			swatchId: 'solid-9',
 			colour: 'white',
 			swatchType: 'solid'
 		},
 		{
+			swatchId: 'solid-2',
+			colour: 'grey',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-3',
+			colour: 'purple',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-4',
+			colour: 'hunter-green',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-5',
+			colour: 'red',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-6',
+			colour: 'beige',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-7',
+			colour: 'yellow',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-8',
+			colour: 'kelly-green',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-9',
+			colour: 'royal-blue',
+			swatchType: 'solid'
+		},
+		{
 			swatchId: 'solid-10',
-			colour: 'black',
+			colour: 'deep-red',
+			swatchType: 'solid'
+		},
+		{
+			swatchId: 'solid-11',
+			colour: 'blue',
 			swatchType: 'solid'
 		}
 	],

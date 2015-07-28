@@ -1,3 +1,4 @@
+
 var swatchStyle = []; //holds the names of the styles in the order that they appear in the data file
 var icount = 0; //used to count how many styles are in the style data file
 var swatchIndexTemplate = []; //holds the information for ___-template class
