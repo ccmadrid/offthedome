@@ -11,7 +11,7 @@ $navBtn.on('click', function () {
 var $left = $('.left-btn');
 var $right = $('.right-btn');
 
-		var width = 80;
+		var width = 40;
     var animationSpeed = 250;
     var pause = 0;
     var currentSlide = 1;
@@ -23,7 +23,7 @@ var $right = $('.right-btn');
     var $test2 = $slides.length - 1;
 
 function goForward() {
-		$slideContainer.animate({'margin-left': '-='+ width +'%'}, animationSpeed, function() {
+		$slideContainer.animate({'margin-left': '-='+ width +'em'}, animationSpeed, function() {
 			if(++currentSlide === $slides.length) {
 				currentSlide = 1;
 				$slideContainer.css('margin-left', 0);
@@ -32,10 +32,10 @@ function goForward() {
 }
 
 function goBackward() {
-		$slideContainer.animate({'margin-left': '+='+ width +'%'}, animationSpeed, function() {
+		$slideContainer.animate({'margin-left': '+='+ width +'em'}, animationSpeed, function() {
 			if(--currentSlide === 0) {
 				currentSlide = $test2;
-				$slideContainer.css('margin-left', ($test) + '%');
+				$slideContainer.css('margin-left', ($test) + 'em');
 			}
 		});
 }

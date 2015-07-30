@@ -331,24 +331,24 @@ body{
 
 .slider {
 	height: 100%;
-	width: 80%;
+	width: 40em;
 	overflow: hidden;
 /*	border: solid 2px #000;*/
 	position: absolute;
-	left: 10%;
+	left: calc(50% - 20em);
 }
 
 .slides {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	width: 800%;
+	width: 150em;
 }
 
 .slide {
 	display: inline-block;
 	height: 100%;
-	width: 12.5%;
+	width: 40em;
 	margin: 0;
 
 }
