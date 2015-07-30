@@ -774,6 +774,7 @@ svg {
 .thread-preview {
 	stroke: #000;
 	stroke-dasharray: 2,2;
+	stroke-width: 0.25;
 	fill: none;
 }
 
