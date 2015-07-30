@@ -111,8 +111,12 @@ $('.back-menu').change(function() {
 			console.log('back changed: ' + getMenu('back-menu'));
 });
 
+var thread = document.getElementById('thread-menu');
+var back = document.getElementById('back-menu');
+
 $reset.on('click', 'a', function (e) {
 	e.preventDefault();
+
 
 	$brim.css('fill', '#fff');
 	$topLeft.css('fill', '#fff');
@@ -126,6 +130,10 @@ $reset.on('click', 'a', function (e) {
 	$sideLeft.attr('data-colour','none');
 	$sideRight.attr('data-colour','none');
 	$front.attr('data-colour','none')
+	thread.options[0].selected = true;
+	$('.thread').css('color', getMenu('thread-menu'));
+	$('.thread-preview').css('stroke', getMenu('thread-menu'));
+	back.options[0].selected = true;
 	console.log('colours reset to white')
 	console.log('brim: ' + $brim.attr('data-colour'));
 	console.log('top-left: ' + $topLeft.attr('data-colour'));
