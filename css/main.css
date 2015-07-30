@@ -429,7 +429,7 @@ body{
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	width: 300%;
+	width: auto
 }
 
 .tabs li {
@@ -456,7 +456,6 @@ body{
 .tabs-bar {
 width: 100%;
 overflow: hidden;
-overflow-x: scroll;
 }
 
 .5panel {
