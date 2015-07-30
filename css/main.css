@@ -652,7 +652,7 @@ overflow-x: scroll;
 }
 
 .thread {
-	margin: 2em;
+	margin: 1em;
 	border: none;
 	border-top: dashed;
 	color: #fff;
@@ -681,79 +681,91 @@ svg {
 .back-menu option {
 	height: 4em;
 }
+.back-menu option[value="natural-leather"] {
+	background: url(../img/natural-leather.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.back-menu option[value="black-leather"] {
+	background: url(../img/black-leather.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+}
 
 .back-menu option[value="yellow-snap"] {
-	background: url(../img/strap-yellow.jpg);
+	background: url(../img/yellow-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 .back-menu option[value="white-snap"] {
-	background: url(../img/strap-white.jpg);
+	background: url(../img/white-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 .back-menu option[value="tan-snap"] {
-	background: url(../img/strap-tan.jpg);
+	background: url(../img/tan-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 .back-menu option[value="royal-snap"] {
-	background: url(../img/strap-royal.jpg);
+	background: url(../img/royal-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 .back-menu option[value="red-snap"] {
-	background: url(../img/strap-red.jpg);
+	background: url(../img/red-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="purple-snap"] {
-	background: url(../img/strap-purple.jpg);
+	background: url(../img/purple-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="maroon-snap"] {
-	background: url(../img/strap-maroon.jpg);
+	background: url(../img/maroon-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="kelly-snap"] {
-	background: url(../img/strap-kelly.jpg);
+	background: url(../img/kelly-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="grey-snap"] {
-	background: url(../img/strap-grey.jpg);
+	background: url(../img/grey-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="forest-snap"] {
-	background: url(../img/strap-forest.jpg);
+	background: url(../img/forest-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="brown-snap"] {
-	background: url(../img/strap-brown.jpg);
+	background: url(../img/brown-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 }
 .back-menu option[value="black-snap"] {
-	background: url(../img/strap-black.jpg);
+	background: url(../img/black-snap.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -763,4 +775,18 @@ svg {
 	stroke: #000;
 	stroke-dasharray: 2,2;
 	fill: none;
+}
+
+.back-preview {
+	margin: 0 auto;
+	height: 3em;
+	width: auto;
+	background-color: #ccc;
+	/*background: url("../img/strap-black.jpg") no-repeat scroll 0% 0% / contain;*/
+
+}
+
+.buckle-area div {
+	text-align: center;
+	margin: 1em;
 }

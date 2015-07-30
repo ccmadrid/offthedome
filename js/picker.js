@@ -106,14 +106,16 @@ $('.thread-menu').change(function() {
 		$('.thread').css('color', getMenu('thread-menu'));
 		$('.thread-preview').css('stroke', getMenu('thread-menu'));
 });
-
+var backPreview = document.getElementById('back-preview')
+backPreview.setAttribute('src', 'img/black-leather.jpg')
 $('.back-menu').change(function() {
-			console.log('back changed: ' + getMenu('back-menu'));
+	backPreview.setAttribute('src', 'img/' + getMenu('back-menu') + '.jpg')
+					console.log('back changed: ' + getMenu('back-menu'));
 });
 
 var thread = document.getElementById('thread-menu');
 var back = document.getElementById('back-menu');
-
+back.options[0].selected = true;
 $reset.on('click', 'a', function (e) {
 	e.preventDefault();
 
@@ -134,6 +136,7 @@ $reset.on('click', 'a', function (e) {
 	$('.thread').css('color', getMenu('thread-menu'));
 	$('.thread-preview').css('stroke', getMenu('thread-menu'));
 	back.options[0].selected = true;
+	backPreview.setAttribute('src', 'img/black-leather.jpg')
 	console.log('colours reset to white')
 	console.log('brim: ' + $brim.attr('data-colour'));
 	console.log('top-left: ' + $topLeft.attr('data-colour'));
