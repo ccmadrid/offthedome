@@ -12,7 +12,7 @@ html {
  -ms-text-size-adjust: 100%;
  -webkit-text-size-adjust: 100%;
  text-size-adjust: 100%;
- background: url(../img/texture.jpg);
+/* background: url(../img/texture.jpg);*/
  background-repeat: no-repeat;
  background-size: cover;
 }
@@ -45,7 +45,7 @@ body{
 }
 
 .main {
-	background-image: url(../img/texture.jpg);
+/*	background-image: url(../img/texture.jpg);*/
 	display: block;
 	position: relative;
 	overflow: hidden;
@@ -324,31 +324,31 @@ body{
 }
 
 .wrapper {
-	height: 20em;
+	height: 30em;
 	/*background-color: #eee;*/
 	position: relative;
 }
 
 .slider {
 	height: 100%;
-	width: 20em;
+	width: 80%;
 	overflow: hidden;
 /*	border: solid 2px #000;*/
 	position: absolute;
-	left: calc(50% - 10em);
+	left: 10%;
 }
 
 .slides {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	width: 1000%;
+	width: 800%;
 }
 
 .slide {
 	display: inline-block;
 	height: 100%;
-	width: 20em;
+	width: 12.5%;
 	margin: 0;
 
 }
@@ -444,11 +444,12 @@ body{
 .tabs a {
 	display: inline-block;
 	padding: 0.75em;
-	border: solid 2px #ccc;
+	border: solid 2px #fbfbfb;
 	text-decoration: none;
 	color: #000;
 	font-size: 0.75em;
 	margin: 0;
+	border-radius: 0 1em 0 0;
 
 }
 
@@ -464,11 +465,11 @@ overflow-x: scroll;
 
 .js-current {
 	border-bottom: none;
-	background-color: #ccc
+	background-color: #eee;
 }
 
 .colours {
-	border: solid 2px #ccc;
+	border: solid 2px #fbfbfb;
 	border-top-width: 0;
 	padding: 0.5em;
 }
@@ -499,12 +500,17 @@ overflow-x: scroll;
 	text-align: center;
 	overflow: hidden;
 	margin: 1em;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	overflow: hidden;
 }
+
 .reset a {
 	text-decoration: none;
 	color: #222;
 	padding: 1em;
 	background-color: #ddd;
+
 }
 /*============================================================================*/
 /*==================================FOOTER====================================*/
@@ -558,6 +564,8 @@ overflow-x: scroll;
 	.square {
 		height: 2.5em;
 		width: 2.5em;
+		border-radius: 0.5em;
+		overflow: hidden;
 	}
 
 
@@ -638,8 +646,7 @@ overflow-x: scroll;
 }
 
 .thread-area, .buckle-area {
-	height: 20em;
-	border: solid 2px #888;
+	border: solid 2px #fbfbfb;
 	padding: 1em;
 	position: relative;
 }
@@ -649,6 +656,14 @@ overflow-x: scroll;
 	border: none;
 	border-top: dashed;
 	color: #fff;
+}
+
+.thread-picker {
+	text-align: center;
+}
+
+.thread-menu {
+	margin: 0 auto;
 }
 
 .5panel-preview {
